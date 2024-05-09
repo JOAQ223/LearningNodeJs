@@ -1,0 +1,28 @@
+@startuml
+!theme amiga
+left to right direction
+actor User as g
+actor Newuser as nu
+package Professional {
+  actor Admin as a
+
+}
+package  Lost_Found_app {
+  usecase "create Post" as UC1
+  usecase "react to Post" as UC2
+  usecase "sing in" as UC3
+  usecase "edit post" as UC5
+usecase "update post" as UC4
+usecase "delete post" as UC7
+
+usecase  "edit & delete Post/User" as UC9
+
+
+}
+a --> UC9
+nu --> UC3
+g --> UC4
+g --> UC1
+g --> UC2
+UC4 --> UC5: extends 
+@enduml
